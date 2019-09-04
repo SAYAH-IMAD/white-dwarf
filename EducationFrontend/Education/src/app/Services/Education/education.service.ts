@@ -11,11 +11,11 @@ export class EducationService {
   constructor(private http: HttpClient) { }
 
   public getEducations(userId: number): Observable<Education[]> {
-     return this.http.get<Education[]>('https://localhost:5001/api/v1/user/${userId}/education/getEducations');
+     return this.http.get<Education[]>('https://localhost:5001/api/v1/user/1/education/getEducations');
   }
 
   public getEducation(userId: number, educationId: number): Observable<Education> {
-    return this.http.get<Education>('https://localhost:5001/api/v1/user/${userId}/education/getEducation/'+educationId);
+    return this.http.get<Education>('https://localhost:5001/api/v1/user/1/education/getEducation/' + educationId);
  }
   public addEducation(education: Education): void {
 
@@ -23,7 +23,7 @@ export class EducationService {
     headers = headers
               .set('Content-Type', 'application/json');
 
-    this.http.post<Education>('https://localhost:5001/api/v1/user/${userId}/education/createEducation', education, {headers})
+    this.http.post<Education>('https://localhost:5001/api/v1/user/1/education/createEducation', education, {headers})
      .subscribe(Response => {
          console.log('success');
        },
