@@ -38,7 +38,7 @@ export class EducationService {
               .set('Content-Type', 'application/json');
 
 
-    this.http.put('https://localhost:5001/api/v1/user/${userId}/education/putEducation/${educationId}', education , {headers})
+    this.http.put('https://localhost:5001/api/v1/user/1/education/putEducation/' + educationId, education , {headers})
     .subscribe(Response => {
       console.log('success');
     },

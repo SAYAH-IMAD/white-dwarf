@@ -26,9 +26,14 @@ export class EducationEditComponent implements OnInit {
   constructor(private educationService: EducationService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+
     this.route.params.subscribe(params => {
       this.educationService.getEducation(1, params.id).subscribe((item: Education) => {
+        if ( item == null ) {
+           this.education = new Education();
+        } else {
         this.education = item;
+        }
 
       });
     });
@@ -38,7 +43,7 @@ export class EducationEditComponent implements OnInit {
     this.educationService.addEducation(this.education);
   }
   public UpdateEducation() {
-    this.educationService.updateEducation(this.educationId, this.education);
+    this.educationService.updateEducation(this.education.id, this.education);
   }
 
   compareFn(x: Education, y: Education): boolean {
