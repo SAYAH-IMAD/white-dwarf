@@ -1,0 +1,44 @@
+mat-card.example-card
+{
+  margin: 20px;
+  max-width: 800px;
+  max-height: 800px;
+  background-color:whitesmoke;
+}
+
+div.education-edit-component{
+margin: 20px;
+max-width: 800px;
+max-height: 800px;
+}
+div.education-edit-component mat-grid-list mat-grid-tile {
+  align-content: stretch;
+  text-align: left;
+  align-items: stretch;
+  width: 40%;
+}
+.example-header-image {
+  width: max-content;
+  height: max-content;
+  background-image: url('https://s-f.scribdassets.com/images/upload/Reach_Upload.svg?58fd8f94e');
+  background-size: cover;
+}
+mat-grid-tile div.button-action{
+  width: fit-content;
+  height: fit-content;
+}
+mat-grid-tile {
+  width: max-content;
+  height: max-content;
+  margin: 20px;
+}
+
+mat-grid-tile.description {
+  width: fit-content;
+}
+
+ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px;
+}

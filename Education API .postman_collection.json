@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "ff47ed53-a207-492a-b9d7-fd1f5a419791",
+		"name": "Education API ",
+		"description": "Education API ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Educations ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Get Educations "
+			},
+			"response": []
+		},
+		{
+			"name": "Post Education",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"schoolName\": \"ESI\",\r\n  \"fieldOfStudy\": \"IT\",\r\n  \"description\": \"Industrial Engineering\",\r\n  \"city\": \"Ghent\",\r\n  \"from\": \"2015\",\r\n  \"to\": \"2020\",\r\n  \"city\":\"Algeria\",\r\n  \"current\": false,\r\n  \"educationType\": \"MASTER\"\r\n  \r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{Host}}/api/v1/user/1/education/createEducation",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"1",
+						"education",
+						"createEducation"
+					]
+				},
+				"description": "Post Education"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Education",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Update Education\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Education ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Delete Education "
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger UI Link",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Education By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Host}}/api/v1/user/1/education/getEducation/{educationId}",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"1",
+						"education",
+						"getEducation",
+						"{educationId}"
+					]
+				},
+				"description": "Get Education By ID"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "6e37c324-2743-4c9e-a344-729df587f77c",
+			"key": "Host",
+			"value": "https://localhost:44390",
+			"type": "string"
+		}
+	]
+}

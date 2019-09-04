@@ -1,0 +1,26 @@
+.education-details {
+  max-width: 300px;
+  max-height: 150px;
+  margin: 5px;
+}
+.education-details mat-card-actions{
+  display: contents;
+}
+.example-header-image {
+  background-image: url('https://s-f.scribdassets.com/images/upload/Reach_Upload.svg?58fd8f94e');
+  background-size: cover;
+}
+
+ul li {
+  display: inline-block;
+  margin: 2px;
+}
+
+ul li:before {
+  content: " • ";
+}
+
+mat-card-actions mat-icon {
+  margin: 10px;
+}
+

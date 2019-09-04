@@ -1,0 +1,15 @@
+<div class="education-list-component">
+  <span class="education-list-title">
+    <h1>
+        Education  <button mat-mini-fab color="primary" [routerLink]="['/education-edit']"> + </button>
+    </h1>
+  </span>
+  <div class="education-list-details">
+    <div *ngIf="educations">
+      <div *ngFor="let education of educations" >
+        <app-education-details [education] ="education"></app-education-details>
+      </div>
+    </div>
+  </div>
+</div>
+

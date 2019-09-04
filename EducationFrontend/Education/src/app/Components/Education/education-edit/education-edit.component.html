@@ -1,0 +1,81 @@
+<mat-card class="example-card">
+<div class="education-edit-component" rowHeight="440px">
+<form >
+    <div class="education-edit-component">
+        <mat-grid-list cols="3"  rowHeight="4:1">
+            <mat-grid-tile [rowspan]="3">
+                <img src="https://s-f.scribdassets.com/images/upload/Upload_Upload.svg?58fd8f94e">
+              </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>School Name</mat-label>
+                    <input matInput [(ngModel)]="education.schoolName" name="schoolName" >
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Level Study </mat-label>
+                    <mat-select  [(ngModel)]="education.educationType" name="educationType" [(value)]="education.educationType" [compareWith]="compareFn">
+                        <mat-option *ngFor="let level of levels" [value]="level">
+                          {{level}}
+                        </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Field Of Study</mat-label>
+                    <input matInput [(ngModel)]="education.fieldOfStudy" name="fieldOfStudy">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>City</mat-label>
+                    <input matInput [(ngModel)]="education.city" name="city">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <input matInput  [matDatepicker]="dps" placeholder="Start Date" [(ngModel)]="education.from" name="from" [value]="education.from">
+                    <mat-datepicker-toggle matSuffix [for]="dps"></mat-datepicker-toggle>
+                    <mat-datepicker #dps
+                                    startView="multi-year"
+                                    panelClass="example-month-picker">
+                    </mat-datepicker>
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="dpe" placeholder="End Date" [(ngModel)]="education.to" name="to" [value]="education.to">
+                    <mat-datepicker-toggle matSuffix [for]="dpe"></mat-datepicker-toggle>
+                    <mat-datepicker #dpe
+                                    startView="multi-year"
+                                    panelClass="example-month-picker">
+                    </mat-datepicker>
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+            </mat-grid-tile>
+            <mat-grid-tile class="description" [colspan]="3" [rowspan]="2">
+                <mat-form-field  >
+                    <textarea matInput placeholder="Description" [(ngModel)]="education.description" name="description"></textarea>
+                  </mat-form-field>
+            </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="2">
+                  <button mat-fab color="primary">Upload</button>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                </mat-grid-tile>
+              <mat-grid-tile [colspan]="1" [rowspan]="1">
+                  <div class="button-action">
+                    <ul>
+                      <li><button mat-raised-button (click)="UpdateEducation()"> Update </button></li>
+                      <li><button mat-raised-button (click)="AddEducation()"> Add </button></li>
+                    </ul>
+                  </div>
+                </mat-grid-tile>
+          </mat-grid-list>
+    </div>
+</form>
+</div>
+</mat-card>

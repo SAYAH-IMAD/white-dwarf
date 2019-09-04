@@ -1,0 +1,10 @@
+div.education-list-component{
+  max-width: 400px;
+  max-height: 400px;
+}
+
+div.education-list-details {
+  max-height: 400px;
+  overflow-x: scroll;
+}
+
