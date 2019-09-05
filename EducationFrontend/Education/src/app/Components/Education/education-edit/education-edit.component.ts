@@ -32,8 +32,7 @@ export class EducationEditComponent implements OnInit {
         if ( item == null ) {
            this.education = new Education();
         } else {
-        this.education = item;
-        }
+        this.education = item;        }
 
       });
     });

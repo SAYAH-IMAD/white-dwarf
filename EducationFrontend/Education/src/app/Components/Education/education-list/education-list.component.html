@@ -6,7 +6,7 @@
   </span>
   <div class="education-list-details">
     <div *ngIf="educations">
-      <div *ngFor="let education of educations" >
+      <div class="education-list-details-components"*ngFor="let education of educations" >
         <app-education-details [education] ="education"></app-education-details>
       </div>
     </div>

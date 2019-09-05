@@ -8,3 +8,7 @@ div.education-list-details {
   overflow-x: scroll;
 }
 
+div.education-list-details-components {
+  display: inline-flex
+}
+

@@ -1,6 +1,13 @@
-<div>
-  <button class="nav_button" mat-raised-button color="primary" [routerLink]="['/education-list']" >Display Education List</button>
-  <button class="nav_button" mat-raised-button color="primary" [routerLink]="['/education-edit']" >Create An Education</button>
+<div gdAreas="header | content | footer">
+  <div gdArea="header">
+    <button class="nav_button" mat-raised-button color="primary" [routerLink]="['/education-list']" >Display Education List</button>
+    <button class="nav_button" mat-raised-button color="primary" [routerLink]="['/education-edit']" >Create An Education</button>
+  </div>
+  <div gdArea="content">
+    <router-outlet></router-outlet>
+  </div>
+  <div gdArea="footer">
+  </div>
 </div>
 
-<router-outlet></router-outlet>
+
