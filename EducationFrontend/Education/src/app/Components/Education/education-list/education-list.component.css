@@ -4,8 +4,9 @@ div.education-list-component{
 }
 
 div.education-list-details {
-  max-height: 400px;
-  overflow-x: scroll;
+  padding: 10px;
+  max-height: 600px;
+  overflow-y: scroll;
 }
 
 div.education-list-details-components {
