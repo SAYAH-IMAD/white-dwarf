@@ -1,11 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
 using Base.DAL;
-using EducationAPI.DAL;
 using EducationAPI.Model;
 using EducationAPI.Extensions;
 
@@ -54,7 +50,6 @@ namespace EducationAPI.DAL
 
        public static void GetEducationAddParameters(this Dictionary<string, object> parameters, int educationId)
         {
-       
             parameters.Add("educationId", educationId);
         }
         #endregion get education sync
@@ -89,15 +84,15 @@ namespace EducationAPI.DAL
         {
             return new Education()
             {
-                Id = int.Parse(reader["Id"].ToString()),
-                City = (string)reader["City"],
-                Current = (bool)reader["current"],
-                Description = (string)reader["description"],
-                EducationType = (string)reader["educationType"],
-                FieldOfStudy = (string)reader["fieldStudy"],
-                From = (string)reader["from"],
-                To = (string) reader["to"],
-                SchoolName = (string)reader["schoolName"]
+                Id = reader["Id"].IsDBNull<int>(),
+                City = reader["City"].IsDBNull<string>(),
+                Current = reader["current"].IsDBNull<bool>(),
+                Description = reader["description"].IsDBNull<string>(),
+                EducationType = reader["educationType"].IsDBNull<string>(),
+                FieldOfStudy = reader["fieldStudy"].IsDBNull<string>(),
+                From = reader["from"].IsDBNull<string>(),
+                To =  reader["to"].IsDBNull<string>(),
+                SchoolName = reader["schoolName"].IsDBNull<string>()
             };
         }
 
@@ -147,8 +142,7 @@ namespace EducationAPI.DAL
         }
 
         public static void DeleteEducationAddParameters(this Dictionary<string, object> parameters, int educationId)
-        {
-       
+        {       
             parameters.Add("educationId", educationId);
         }
 
