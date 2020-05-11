@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Base.DAL;
 using EducationAPI.DAL;
 using EducationAPI.Model;
+using EducationAPI.Extensions;
 
 namespace EducationAPI.DAL
 {
@@ -26,20 +27,20 @@ namespace EducationAPI.DAL
         {
             return new Education()
             {
-                Id = int.Parse(reader["Id"].ToString()),
-                City = (string)reader["City"],
-                Current = (bool)reader["current"],
-                Description = (string)reader["description"],
-                EducationType = (string)reader["educationType"],
-                FieldOfStudy = (string)reader["fieldOfStudy"],
-                From = (string)reader["from"],
-                To = (string) reader["to"],
-                SchoolName = (string)reader["schoolName"]
+                Id = reader["Id"].IsDBNull<int>(),
+                City = (string)reader["City"].IsDBNull<string>(),
+                Current = (bool)reader["current"].IsDBNull<bool>(),
+                Description = (string)reader["description"].IsDBNull<string>(),
+                EducationType = (string)reader["educationType"].IsDBNull<string>(),
+                FieldOfStudy = (string)reader["fieldOfStudy"].IsDBNull<string>(),
+                From = (string)reader["from"].IsDBNull<string>(),
+                To = (string) reader["to"].IsDBNull<string>(),
+                SchoolName = (string)reader["schoolName"].IsDBNull<string>(),
             };
         }
         #endregion get education  sync
 
-        #region 
+        #region get education sync
          public static ContractDataSync<Education> GetEducation(int educationId)
         {
             var getGetDataContract = new ContractDataSync<Education>(
@@ -56,7 +57,8 @@ namespace EducationAPI.DAL
        
             parameters.Add("educationId", educationId);
         }
-        #endregion
+        #endregion get education sync
+
         #region  post education
         public static ContractDataAsync<Education> PostEducation(Education education)
         {

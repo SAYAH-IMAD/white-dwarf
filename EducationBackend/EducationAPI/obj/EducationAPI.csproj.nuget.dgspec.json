@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\isayah\\Desktop\\projet white dwarf\\EducationBackend\\EducationAPI\\EducationAPI.csproj": {}
+    "C:\\Users\\isayah\\source\\repos\\SAYAH-IMAD\\white-dwarf\\EducationBackend\\EducationAPI\\EducationAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\isayah\\Desktop\\projet white dwarf\\EducationBackend\\EducationAPI\\EducationAPI.csproj": {
+    "C:\\Users\\isayah\\source\\repos\\SAYAH-IMAD\\white-dwarf\\EducationBackend\\EducationAPI\\EducationAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\isayah\\Desktop\\projet white dwarf\\EducationBackend\\EducationAPI\\EducationAPI.csproj",
+        "projectUniqueName": "C:\\Users\\isayah\\source\\repos\\SAYAH-IMAD\\white-dwarf\\EducationBackend\\EducationAPI\\EducationAPI.csproj",
         "projectName": "EducationAPI",
-        "projectPath": "C:\\Users\\isayah\\Desktop\\projet white dwarf\\EducationBackend\\EducationAPI\\EducationAPI.csproj",
+        "projectPath": "C:\\Users\\isayah\\source\\repos\\SAYAH-IMAD\\white-dwarf\\EducationBackend\\EducationAPI\\EducationAPI.csproj",
         "packagesPath": "C:\\Users\\isayah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\isayah\\Desktop\\projet white dwarf\\EducationBackend\\EducationAPI\\obj\\",
+        "outputPath": "C:\\Users\\isayah\\source\\repos\\SAYAH-IMAD\\white-dwarf\\EducationBackend\\EducationAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -49,15 +49,15 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.0.0-rc2, )"
+              "version": "[5.4.1, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
-              "version": "[5.0.0-rc2, )"
+              "version": "[5.4.1, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.6.1, )"
+              "version": "[4.8.1, )"
             }
           },
           "imports": [
@@ -70,6 +70,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.3, 3.0.3]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -78,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-preview8-013656\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

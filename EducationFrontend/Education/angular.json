@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Education"
+    }
+  },
+  "defaultProject": "Education",
+  "cli": {
+    "analytics": "31b388c2-ff10-4c34-9a26-24027adf3c82"
+  }
 }
